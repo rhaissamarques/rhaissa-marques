@@ -1,0 +1,40 @@
+.header-box {
+  background-color: magenta;
+  min-height: 10rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-name {
+  font-family: poppings, sans-serif;
+  margin-top: 1.5rem;
+  background-color: yellowgreen;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.data-analyst {
+  font-size: 1.5rem;
+  background-color: cyan;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: poppins, sans-serif;
+  font-size: 2.5em; /* Tamanho do título secundário (onde a animação aparece) */
+  color: #dcdcdc; /* Cor base para o h2 */
+  min-height: 2.5em; /* Garante espaço suficiente para o texto animado, evitando quebra de layout */
+  display: flex; /* Para centralizar o typed-text-container dentro do h2 */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; /* Mais espaço abaixo do texto animado */
+}
+
+.animation {
+  color: #c01616;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(140, 122, 230, 0.4);
+}
