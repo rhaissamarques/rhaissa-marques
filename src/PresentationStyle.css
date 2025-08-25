@@ -1,40 +1,139 @@
-.header-box {
-  background-color: magenta;
-  min-height: 10rem;
+.hero {
+  position: relative;
+  min-height: 86vh;
   display: grid;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.grid {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 60%;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+}
+.blob {
+  position: absolute;
+  inset: auto -20% -30% -20%;
+  height: 80vh;
+  filter: blur(60px);
+  background: radial-gradient(
+      circle at 20% 40%,
+      rgba(123, 162, 255, 0.35),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(90, 255, 210, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(255, 153, 204, 0.18),
+      transparent 40%
+    );
+  animation: float 12s ease-in-out infinite alternate;
+}
+@keyframes float {
+  to {
+    transform: translateY(-30px) scale(1.05);
+  }
+}
+.hero__content {
+  position: relative;
+  text-align: center;
+  padding: 96px 0;
 }
 
-.profile-name {
-  font-family: poppings, sans-serif;
-  margin-top: 1.5rem;
-  background-color: yellowgreen;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
+.rhaissa-marques {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
 }
 
-.data-analyst {
-  font-size: 1.5rem;
-  background-color: cyan;
-  display: flex;
-  justify-content: center;
+.kicker {
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0;
+}
+.accent {
+  color: var(--brand-300);
 }
 
 h2 {
   font-family: poppins, sans-serif;
-  font-size: 2.5em; /* Tamanho do título secundário (onde a animação aparece) */
-  color: #dcdcdc; /* Cor base para o h2 */
-  min-height: 2.5em; /* Garante espaço suficiente para o texto animado, evitando quebra de layout */
-  display: flex; /* Para centralizar o typed-text-container dentro do h2 */
+  font-size: 2.5em;
+  color: #dcdcdc;
+  min-height: 2.5em;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px; /* Mais espaço abaixo do texto animado */
+  margin-bottom: 30px;
 }
 
 .animation {
-  color: #c01616;
+  color: #3182ce;
   font-weight: bold;
   text-shadow: 1px 1px 5px rgba(140, 122, 230, 0.4);
+}
+
+.sub {
+  color: var(--muted);
+  max-width: 760px;
+  margin: 16px auto 28px;
+}
+.cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--stroke);
+  transition: 0.2s box-shadow, 0.2s transform;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn--primary {
+  background: linear-gradient(135deg, var(--brand-500), var(--brand-600));
+  color: white;
+  border-color: transparent;
+  /* box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35); */
+}
+.btn--primary:hover {
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.45);
+}
+.btn--ghost {
+  background: var(--ghost);
+  color: var(--text);
+}
+.btn--ghost:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
