@@ -1,3 +1,4 @@
+import "./ProjectsStyle.css";
 import logisticaImg from "./img/logistica.png";
 import AtendimentoLaboratorial from "./img/AtendimentoLaboratorial.png";
 import Vendas from "./img/vendas.png";
@@ -19,7 +20,7 @@ function Projects() {
                   backgroundImage: `url("${p.image}")`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundBlendMode: "multiply", // <- mistura gradiente + foto
+                  backgroundBlendMode: "multiply",
                 }}
               />
               <div className="card__body">
