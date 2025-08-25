@@ -2,14 +2,16 @@ import "./HeaderStyle.css";
 
 function Header() {
   return (
-    <>
-      <div className="content">
-        <div className="inicio">Início</div>
-        <div className="sobre">Sobre</div>
-        <div className="portfolio">Projetos</div>
-        <div className="contato">Contato</div>
-      </div>
-    </>
+    <header className="nav">
+      <a href="#hero" className="brand">
+        Meu Portfólio
+      </a>
+      <nav className="links">
+        <a href="#projects">Projetos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </header>
   );
 }
 
